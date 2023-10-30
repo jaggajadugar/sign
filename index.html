@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn text into an image.">
+  <meta name="author" content="Kabir Shah">
+
+  <title>Custom Neon Sign</title>
+  <link rel="stylesheet" type="text/css" href="./css/lib/wing.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <script>
+  </script>
+</head>
+
+<body>
+  <section class="main">
+    <div class="container">
+      <div class="small">
+        <canvas id="canv"></canvas>
+		  <div><a href="https://custom-neon-sign.com/"><img src="img/logo-custom-neon-sign.jpg" width="360" class="logo"></a>
+		<label class='label'>Lines to say:</label>
+		  <div class='numberline' id='numberline'>
+			  	<span><input name="line" type="radio"value="1" checked onclick="generate()"/>1-line </span>
+				<span><input name="line" type="radio"value="2" onclick="generate()"/>2-line </span>
+				<span><input name="line" type="radio"value="3" onclick="generate()"/>3-line</span>
+			  <br/>
+		  </div>
+		<label class='label'>Size of your sign:</label>
+		<div class="size">
+		<span><input name="size" type="radio"value="10"  onchange="generate()"/>10" </span>
+		<span><input name="size" type="radio"value="14" checked onchange="generate()"/>14" </span>
+		<span><input name="size" type="radio"value="17" onchange="generate()"/>17"</span>
+		<span><input name="size" type="radio"value="19" onchange="generate()"/>19" </span>
+		<span><input name="size" type="radio"value="21" onchange="generate()"/>21" </span>
+		<span><input name="size" type="radio"value="23" onchange="generate()"/>23" </span>
+		<span><input name="size" type="radio"value="25" onchange="generate()"/>25" </span>
+		<span><input name="size" type="radio"value="30" onchange="generate()"/>30"</span>
+		<span><input name="size" type="radio"value="32" onchange="generate()"/>32" </span>
+		<span><input name="size" type="radio"value="35" onchange="generate()"/>35" </span>
+		<span><input name="size" type="radio"value="40" onchange="generate()"/>40" </span>
+		<span><input name="size" type="radio"value="45" onchange="generate()"/>45" </span>
+		<span><input name="size" type="radio"value="50" onchange="generate()"/>50" </span>
+		<span><input name="size" type="radio"value="55" onchange="generate()"/>55" </span>
+		</div>
+		  <label class='label'>Power:</label>
+		  <div class='power'>
+			  <span><input name='power' type=radio value="12V Black" checked onchange="generate()">Black Adapter +15</input></span>
+			  <span><input name='power' type=radio value="12V White"  onchange="generate()">White Adapter +25</input></span>
+              <span><input name='power' type=radio value="USB"   onchange="generate()">USB Operated +5</input></span>
+			  <span><input name='power' type=radio value="12V No Adapter"  onchange="generate()">No Adapter(12V)</input></span>
+		  </div>
+		 Enter your letters:
+		<textarea id="text" onkeyup="grow(this)" placeholder="Your Letters"></textarea>
+		<div><span id="tip" class="tip"></span></div>
+		<button id="save" onclick="downLoadImage();">Save Design</button>
+		<img id="image" width=350 height=340 style='display:block'/>
+		<label class='label'>Color
+			<input type=hidden id='color_1st' value='#F0F0F9'/>
+			<input type=hidden id='color_2nd' value='#F0F0F9'/>
+			<input type=hidden id='color_3rd' value='#F0F0F9'/>
+			<select id="color_apply" style='display:inline;width:150px'>
+				<option value="0">Set for all line</option>
+				<option value="1">Set for 1st line</option>
+				<option value="2">Set for 2nd line</option>
+				<option value="3">Set for 3rd line</option>
+			</select>
+		<select id="color"  style='display:inline;width:130px; background:#525B62'>
+		<option value='#F0F0F9' title='WHT' style='color:#f0f0ff;size:15pt' selected><label style='color:white'>White</label></option>
+		<option value="#fefdce" title='WWT' style='color:#fefdce'><label style='color:#fefdce'>Warm White</label></option>
+		<option value='#0274fb' title='BLU' style='color:#0274fb'><label style='color:#0274fb'>Blue      </label></option>
+		<option value='#90dcfe' title='IBL' style='color:#90dcfe'><label style='color:#90dcfe'>Ice Blue   </label></option>
+		<option value='#cd2e1e' title='RED' style='color:#cd2e1e'><label style='color:#cd2e1e'>Red        </label></option>
+		<option value='#ff90fe' title='PNK' style='color:#ff90fe'><label style='color:#ff90fe'>Pink</label></option>
+		<option value='#8c59fe' title='PRP' style='color:#8c59fe'><label style='color:#8c59fe'>Purple</label></option>
+		<option value='#fff97c' title='YLW' style='color:#fff97c'><label style='color:#fff97c'>Yellow</label></option>
+		<option value='#fff97c' title='LMD' style='color:#F0D800'><label style='color:#F0D800'>Lemond Yellow</label></option>
+		<option value='#ff8d01' title='ORG' style='color:#ff8d01'><label style='color:#ff8d01'>Orange</label></option>
+
+
+		<option value='#85feaa' title='GRN' style='color:#85feaa'><label style='color:#85feaa'>Green</label></option>
+		</select>
+		</label>
+		<label class='label'>Font&nbsp;
+			<select id="font_apply" style='display:inline;width:200px'>
+			<option value="0" selected>Set for all line</option>
+			<option value="1">Set for 1st line</option>
+			<option value="2">Set for 2nd line</option>
+			<option value="3">Set for 3rd line</option>
+			</select>
+			<input type=hidden id='font_1st' value='Alexa'/>
+			<input type=hidden id='font_2nd' value='Alexa'/>
+			<input type=hidden id='font_3rd' value='Alexa'/>
+		</label>
+
+		<div class='font' id='font'>
+		<span id='Alexa'><input name='font' type=radio value='Alexa' class='Alexa' checked onchange="generate()">Alexa</input></span>
+		<span id='Allura'><input name='font' type=radio value='Allura' class='Allura'  onchange="generate()">Allura</input></span>
+		<span id='AmongusVector'><input name='font' type=radio value='AmongusVector' class='AmongusVector'  onchange="generate()">AmongusVector</input></span>
+		<span id='Audiowide'><input name='font' type=radio value='Audiowide' class='Audiowide'  onchange="generate()">Audiowide</input></span>
+		<span id='Backstay'><input name='font' type=radio value='Backstay' class='Backstay'  onchange="generate()">Backstay</input></span>
+		<span id='Barcelona'><input name='font' type=radio value='Barcelona' class='Barcelona'  onchange="generate()">Barcelona</input></span>
+		<span id='BroadwayAlt2'><input name='font' type=radio value='BroadwayAlt2' class='BroadwayAlt2'  onchange="generate()">BroadwayAlt2</input></span>
+		<span id='Barcelony'><input name='font' type=radio value='Barcelony' class='Barcelony'  onchange="generate()" >Barcelony</input></span>
+
+		<span id='Caimss'><input name='font' type=radio value='Caimss' class='Caimss'  onchange="generate()">Caimss</input></span>
+		<span id='Chewy'><input name='font' type=radio value='Chewy' class='Chewy'  onchange="generate()">Chewy</input></span>
+		<span id='Chucklots'><input name='font' type=radio value='Chucklots' class='Chucklots'  onchange="generate()">Chucklots</input></span>
+		<span id='FannysHand'><input name='font' type=radio value='FannysHand' class='FannysHand'  onchange="generate()">FannysHand</input></span>
+		<span id='Gamot'><input name='font' type=radio value='Gamot' class='Gamot'  onchange="generate()">Gamot</input></span>
+		<span id='GreatVibes'><input name='font' type=radio value='GreatVibes' class='GreatVibes'  onchange="generate()">GreatVibes</input></span>
+		<span id='Heleno'><input name='font' type=radio value='Heleno' class='Heleno'  onchange="generate()">Heleno</input></span>
+		<span id='Jesco3'><input name='font' type=radio value='Jesco3' class='Jesco3'  onchange="generate()">Jesco3</input></span>
+		<span id='JuliusSansOne'><input name='font' type=radio value='JuliusSansOne' class='JuliusSansOne'  onchange="generate()">JuliusSansOne</input></span>
+		<span id='LannysHand'><input name='font' type=radio value='LannysHand' class='LannysHand'  onchange="generate()">LannysHand</input></span>
+		<span id='LaraPrints'><input name='font' type=radio value='LaraPrints' class='LaraPrints'  onchange="generate()">LaraPrints</input></span>
+		<span id='LieToMe'><input name='font' type=radio value='LieToMe' class='LieToMe'  onchange="generate()">LieToMe</input></span>
+		<span id='Linoleo'><input name='font' type=radio value='Linoleo' class='Linoleo'  onchange="generate()">Linoleo</input></span>
+		<span id='LoolelooCondBold'><input name='font' type=radio value='LoolelooCondBold' class='LoolelooCondBold'  onchange="generate()">LoolelooCondBold</input></span>
+		<span id='LoveRock'><input name='font' type=radio value='LoveRock' class='LoveRock'  onchange="generate()">LoveRock</input></span>
+		<span id='MarckScript'><input name='font' type=radio value='MarckScript' class='MarckScript'  onchange="generate()">MarckScript</input></span>
+		<span id='Mtmasb'><input name='font' type=radio value='Mtmasb' class='Mtmasb'  onchange="generate()">Mtmasb</input></span>
+		<span id='MysticCondensed'><input name='font' type=radio value='MysticCondensed' class='MysticCondensed'  onchange="generate()">MysticCondensed</input></span>
+		<span id='NeonBines'><input name='font' type=radio value='NeonBines' class='NeonBines'  onchange="generate()">NeonBines</input></span>
+		<span id='Nina'><input name='font' type=radio value='Nina' class='Nina'  onchange="generate()">Nina</input></span>
+		<span id='Orson'><input name='font' type=radio value='Orson' class='Orson'  onchange="generate()">Orson</input></span>
+		<span id='Pacifico'><input name='font' type=radio value='Pacifico' class='Pacifico'  onchange="generate()">Pacifico</input></span>
+		<span id='PamsItalic'><input name='font' type=radio value='PamsItalic' class='PamsItalic'  onchange="generate()">PamsItalic</input></span>
+		<span id='Parisienne'><input name='font' type=radio value='Parisienne' class='Parisienne'  onchange="generate()">Parisienne</input></span>
+		<span id='PinyonScript'><input name='font' type=radio value='PinyonScript' class='PinyonScript'  onchange="generate()">PinyonScript</input></span>
+		<span id='PoiretOne'><input name='font' type=radio value='PoiretOne' class='PoiretOne'  onchange="generate()">PoiretOne</input></span>
+		<span id='Rochester'><input name='font' type=radio value='Rochester' class='Rochester'  onchange="generate()">Rochester</input></span>
+		<span id='RockSalt'><input name='font' type=radio value='RockSalt' class='RockSalt'  onchange="generate()">RockSalt</input></span>
+		<span id='Roustel'><input name='font' type=radio value='Roustel' class='Roustel'  onchange="generate()">Roustel</input></span>
+		<span id='Satisfy'><input name='font' type=radio value='Satisfy' class='Satisfy'  onchange="generate()">Satisfy</input></span>
+		<span id='Sennita'><input name='font' type=radio value='Sennita' class='Sennita'  onchange="generate()">Sennita</input></span>
+		<span id='Softbox'><input name='font' type=radio value='Softbox' class='Softbox'  onchange="generate()">Softbox</input></span>
+		<span id='SweetGarlic'><input name='font' type=radio value='SweetGarlic' class='SweetGarlic'  onchange="generate()">SweetGarlic</input></span>
+		<span id='Syncopate'><input name='font' type=radio value='Syncopate' class='Syncopate'  onchange="generate()">Syncopate</input></span>
+		<span id='UnicaOne'><input name='font' type=radio value='UnicaOne' class='UnicaOne'  onchange="generate()">UnicaOne</input></span>
+		
+	</div>
+		<br/>
+		<label class='label'>Back board:</label>
+		<div class='board'>
+			<span><input name='board' type=radio value="Transparent" checked onchange="generate()">Transparent</input></span>
+			<span><input name='board' type=radio value="Black" onchange="generate()">Black</input></span>
+		</div>
+		<label class='label'>Indoor/waterproof:</label>
+		<div class='use'>
+		<span>		<input name='use' type=radio value="Indoor" checked  onchange="generate()">Indoor Use Only</input></span>
+		<span>		<input name='use' type=radio value="Waterproof"  onchange="generate()">Waterproof+30 </input></span>
+		</div>
+
+
+		<label class='label'>Board Shape:</label>
+		<div class='shape'>
+		<span><input name='shape' type=radio value="CutShape" checked  onchange="generate()">Cut to shape</input></span>
+		<span><input name='shape' type=radio value="CutRectangle"  onchange="generate()">Cut to Rectangle+5</input></span>
+		</div>
+
+		<label class='label'>Dimmer</label>
+		<div class="dimmer">
+			<span id='nodimmer'><input name='dimmer' type=radio  value="No Dimmer" checked onchange="generate()">No Dimmer</input></span>
+			<span id='blackdimmer'><input name='dimmer' type=radio  value="Black Dimmer" onchange="generate()">Black Dimmer+5</input></span>
+			<span id='whitedimmer'><input name='dimmer' type=radio value="White Dimmer"  onchange="generate()">White Dimmer+7</input></span>
+			<span id='remotedimmer'><input name='dimmer' type=radio value="Remote"  onchange="generate()">Remote+12</input></span>
+		</div>
+
+		<label class='label'>Mounting</label>
+		  <div class='mount'>
+			<span id='wall'>	<input name='mounting' type=radio value="Wall" checked  onchange="generate()"><label>Wall mount</label></input></span>
+			<span id='chain'>	<input name='mounting' type=radio value="Chains"  onchange="generate()"><label>Hanging Chain +5</label></input></span>
+			<span id='ceiling'>	<input name='mounting' type=radio value="Ceiling"  onchange="generate()"><label>Ceiling Mount+12</label></input></span>
+		</div>
+
+		<div><label class='label'>Notes:</label><input type="text" name="notes" id="notes" width=40 onchange="generate()"></input>
+		<div>
+		<button id="submit">Save Design</button>
+		</div>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+  <a href="http://kabir.ml" id="footer-link">
+    <div id="footer-content">
+      <div id="footer-desc">
+        <p id="footer-madeby"></p>
+      </div>
+    </div>
+  </a>
+</footer>
+  <script type="text/javascript" src="./js/scripts.js"></script>
+</body>
+</html>
