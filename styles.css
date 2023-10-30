@@ -1,0 +1,411 @@
+body {
+  background-color: #DDDDDD;
+  color: #232323;
+}
+.font{
+	font-size: 3rem;
+	background-color: #000000;
+	color:#F0F0F9;
+}
+.font span{
+	display:inline-block;
+}
+.tip{
+    font-size:2rem;
+    color:red;
+}
+@font-face{font-family: Alexa;src: url('../fonts/Alexa.ttf');}
+.font #Alexa{margin:4px;display:inline-block;font-family:Alexa;}
+@font-face{font-family: Allura;src: url('../fonts/Allura.ttf');}
+.font #Allura{margin:4px;display:inline-block;font-family:Allura;}
+
+@font-face{font-family: Amazon;src: url('../fonts/Amazon.ttf');}
+.font #Amazon{margin:4px;display:inline-block;font-family:Amazon;}
+
+@font-face{font-family: AmongusVector;src: url('../fonts/AmongusVector.ttf');}
+.font #AmongusVector{margin:4px;display:inline-block;font-family:AmongusVector;}
+
+@font-face{font-family: Amsterdam;src: url('../fonts/Amsterdam.ttf');}
+.font #Amsterdam{margin:4px;display:inline-block;font-family:Amsterdam;}
+
+@font-face{font-family: Audiowide;src: url('../fonts/Audiowide.ttf');}
+.font #Audiowide{margin:4px;display:inline-block;font-family:Audiowide;}
+
+@font-face{font-family: Backstay;src: url('../fonts/Backstay.ttf');}
+.font #Backstay{margin:4px;display:inline-block;font-family:Backstay;}
+
+@font-face{font-family: Barcelona;src: url('../fonts/Barcelona.ttf');}
+.font #Barcelona{margin:4px;display:inline-block;font-family:Barcelona;}
+
+@font-face{font-family: Barcelony;src: url('../fonts/Barcelony.ttf');}
+.font #Barcelony{margin:4px;display:inline-block;font-family:Barcelony;}
+
+@font-face{font-family: BroadwayAlt2;src: url('../fonts/BroadwayAlt2.ttf');}
+.font #BroadwayAlt2{margin:4px;display:inline-block;font-family:BroadwayAlt2;}
+
+@font-face{font-family: Caimss;src: url('../fonts/Caimss.ttf');}
+.font #Caimss{margin:4px;display:inline-block;font-family:Caimss;}
+
+@font-face{font-family: Chewy;src: url('../fonts/Chewy.ttf');}
+.font #Chewy{margin:4px;display:inline-block;font-family:Chewy;}
+
+@font-face{font-family: Chucklots;src: url('../fonts/Chucklots.ttf');}
+.font #Chucklots{margin:4px;display:inline-block;font-family:Chucklots;}
+
+@font-face{font-family: FannysHand;src: url('../fonts/FannysHand.ttf');}
+.font #FannysHand{margin:4px;display:inline-block;font-family:FannysHand;}
+
+@font-face{font-family: Gamot;src: url('../fonts/Gamot.ttf');}
+.font #Gamot{margin:4px;display:inline-block;font-family:Gamot;}
+
+@font-face{font-family: GreatVibes;src: url('../fonts/GreatVibes.ttf');}
+.font #GreatVibes{margin:4px;display:inline-block;font-family:GreatVibes;}
+
+@font-face{font-family: Heleno;src: url('../fonts/Heleno.ttf');}
+.font #Heleno{margin:4px;display:inline-block;font-family:Heleno;}
+
+@font-face{font-family: Honey Script;src: url('../fonts/Honey Script.ttf');}
+.font #Honey Script{margin:4px;display:inline-block;font-family:Honey Script;}
+
+@font-face{font-family: Jesco3;src: url('../fonts/Jesco3.ttf');}
+.font #Jesco3{margin:4px;display:inline-block;font-family:Jesco3;}
+
+@font-face{font-family: JuliusSansOne;src: url('../fonts/JuliusSansOne.ttf');}
+.font #JuliusSansOne{margin:4px;display:inline-block;font-family:JuliusSansOne;}
+
+@font-face{font-family: LannysHand;src: url('../fonts/LannysHand.ttf');}
+.font #LannysHand{margin:4px;display:inline-block;font-family:LannysHand;}
+
+@font-face{font-family: LaraPrints;src: url('../fonts/LaraPrints.ttf');}
+.font #LaraPrints{margin:4px;display:inline-block;font-family:LaraPrints;}
+
+@font-face{font-family: LieToMe;src: url('../fonts/LieToMe.ttf');}
+.font #LieToMe{margin:4px;display:inline-block;font-family:LieToMe;}
+
+@font-face{font-family: Linoleo;src: url('../fonts/Linoleo.ttf');}
+.font #Linoleo{margin:4px;display:inline-block;font-family:Linoleo;}
+
+@font-face{font-family: list;src: url('../fonts/list.ttf');}
+.font #list{margin:4px;display:inline-block;font-family:list;}
+
+@font-face{font-family: LoolelooCondBold;src: url('../fonts/LoolelooCondBold.ttf');}
+.font #LoolelooCondBold{margin:4px;display:inline-block;font-family:LoolelooCondBold;}
+
+@font-face{font-family: LoveRock;src: url('../fonts/LoveRock.ttf');}
+.font #LoveRock{margin:4px;display:inline-block;font-family:LoveRock;}
+
+@font-face{font-family: MarckScript;src: url('../fonts/MarckScript.ttf');}
+.font #MarckScript{margin:4px;display:inline-block;font-family:MarckScript;}
+
+@font-face{font-family: Mtmasb;src: url('../fonts/Mtmasb.ttf');}
+.font #Mtmasb{margin:4px;display:inline-block;font-family:Mtmasb;}
+
+@font-face{font-family: MysticCondensed;src: url('../fonts/MysticCondensed.ttf');}
+.font #MysticCondensed{margin:4px;display:inline-block;font-family:MysticCondensed;}
+
+@font-face{font-family: NeonBines;src: url('../fonts/NeonBines.ttf');}
+.font #NeonBines{margin:4px;display:inline-block;font-family:NeonBines;}
+
+@font-face{font-family: Nina;src: url('../fonts/Nina.ttf');}
+.font #Nina{margin:4px;display:inline-block;font-family:Nina;}
+
+@font-face{font-family: Orson;src: url('../fonts/Orson.ttf');}
+.font #Orson{margin:4px;display:inline-block;font-family:Orson;}
+
+@font-face{font-family: Pacifico;src: url('../fonts/Pacifico.ttf');}
+.font #Pacifico{margin:4px;display:inline-block;font-family:Pacifico;}
+
+@font-face{font-family: PamsItalic;src: url('../fonts/PamsItalic.ttf');}
+.font #PamsItalic{margin:4px;display:inline-block;font-family:PamsItalic;}
+
+@font-face{font-family: Parisienne;src: url('../fonts/Parisienne.ttf');}
+.font #Parisienne{margin:4px;display:inline-block;font-family:Parisienne;}
+
+@font-face{font-family: PinyonScript;src: url('../fonts/PinyonScript.ttf');}
+.font #PinyonScript{margin:4px;display:inline-block;font-family:PinyonScript;}
+
+@font-face{font-family: PoiretOne;src: url('../fonts/PoiretOne.ttf');}
+.font #PoiretOne{margin:4px;display:inline-block;font-family:PoiretOne;}
+
+@font-face{font-family: Rochester;src: url('../fonts/Rochester.ttf');}
+.font #Rochester{margin:4px;display:inline-block;font-family:Rochester;}
+
+@font-face{font-family: RockSalt;src: url('../fonts/RockSalt.ttf');}
+.font #RockSalt{margin:4px;display:inline-block;font-family:RockSalt;}
+
+@font-face{font-family: Satisfy;src: url('../fonts/Satisfy.ttf');}
+.font #Satisfy{margin:4px;display:inline-block;font-family:Satisfy;}
+
+@font-face{font-family: Sennita;src: url('../fonts/Sennita.ttf');}
+.font #Sennita{margin:4px;display:inline-block;font-family:Sennita;}
+
+@font-face{font-family: Softbox;src: url('../fonts/Softbox.ttf');}
+.font #Softbox{margin:4px;display:inline-block;font-family:Softbox;}
+
+@font-face{font-family: SweetGarlic;src: url('../fonts/SweetGarlic.ttf');}
+.font #SweetGarlic{margin:4px;display:inline-block;font-family:SweetGarlic;}
+
+@font-face{font-family: Syncopate;src: url('../fonts/Syncopate.ttf');}
+.font #Syncopate{margin:4px;display:inline-block;font-family:Syncopate;}
+
+@font-face{font-family: UnicaOne;src: url('../fonts/UnicaOne.ttf');}
+.font #UnicaOne{margin:4px;display:inline-block;font-family:UnicaOne;}
+
+@font-face{font-family: Roustel;src: url('../fonts/Roustel.ttf');}
+.font #Roustel{margin:4px;display:inline-block;font-family:Roustel;}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+.main  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 102%;
+}
+
+.container {
+  width: 100%;
+	max-width: 640px
+}
+.logo{
+	width: 100%;
+	max-width: 360px;
+	alignment: center;
+}
+
+.small {
+  min-width: 60%;
+}
+textarea {
+  font-size: 1.5rem;
+  background: #DDDDDD;
+  color: #232323;
+  border: 2px solid #232323;
+  border-radius: 0;
+  resize: none;
+  overflow: hidden;
+  min-height: 6rem;
+  transition: height 0.1s ease;
+}
+
+textarea:focus {
+  border: 3px solid #232323;
+  border-radius: 0;
+}
+
+button {
+  border-radius: 0;
+  margin-left: 0;
+  background: #131313;
+  border: 3px solid #131313;
+  color: #FAFAFA;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 1;
+  background: #131313;
+  color: #FAFAFA;
+  border: 3px solid #FFFFFF;
+}
+
+canvas {
+  display: none;
+}
+
+.white{
+	color:#FFFFFF;
+}
+
+.size
+{
+	border:1px solid;
+	display:block;
+}
+.size span{
+	margin:4px;
+	width:50px;
+	height:20px;
+	display:inline-block;
+}
+
+.numberline
+{
+	border:1px solid;
+	display:block;
+}
+
+.numberline span{
+	margin:4px;
+	width:100px;
+	height:20px;
+	display:inline-block;
+}
+
+.board
+{
+	border:1px solid;
+	display:block;
+}
+
+.board span{
+	margin:4px;
+	width:160px;
+	height:20px;
+	display:inline-block;
+}
+
+.use
+{
+	border:1px solid;
+	display:block;
+}
+
+.use span{
+	margin:4px;
+	width:160px;
+	height:20px;
+	display:inline-block;
+}
+.shape
+{
+	border:1px solid;
+	display:block;
+}
+.shape span{
+	margin:4px;
+	width:160px;
+	height:20px;
+	display:inline-block;
+}
+
+.power
+{
+	border:1px solid;
+	display:block;
+}
+
+.power span{
+	margin:4px;
+	width:160px;
+	height:20px;
+	display:inline-block;
+}
+
+.dimmer
+{	border:1px solid;
+	display:block;
+}
+.dimmer span{
+	margin:4px;
+	width:160px;
+	height:20px;
+	display:inline-block;
+}
+.dimmer #nodimmer{
+}
+.dimmer #blackdimmer{
+}
+.dimmer #whitedimmer{
+}
+.dimmer label{
+
+}
+
+.mount
+{
+	display:block;
+	border:1px solid;
+	display:block;
+}
+.mount span{
+	margin:4px;
+	width:160px;
+	height:30px;
+	display:inline-block;
+	background-size:140px 100px;
+	background-repeat: no-repeat;
+}
+.mount #wall{
+
+}
+.mount #chain{
+
+}
+.mount #ceiling{
+
+}
+.mount label{
+
+}
+
+
+
+#image {
+  display: none;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.label{
+	color:#000000;
+	font-size:1.5rem;
+	display:block;
+}
+.radio{
+	color:#000000;
+	font-size:2rem;
+	display:block;
+
+}
+
+/* === Footer === */
+footer {
+	position: absolute;
+	margin: 5rem;
+}
+
+#footer-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#footer-name, #footer-madeby {
+	margin-bottom: 0;
+	margin-top: 0;
+  margin-left: 1rem;
+  font-weight: 300;
+  color: #555555;
+}
+
+#footer-name {
+  font-weight: 700;
+}
+
+#footer-desc {
+	font-size: 2.5rem;
+}
+
+#footer-logo {
+	height: 75px;
+	width: 75px;
+	border-radius: 10px;
+}
+
+#footer-link {
+	color: #f5f5f5;
+	text-decoration: none;
+}
